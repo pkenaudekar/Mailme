@@ -1,0 +1,19 @@
+{
+  "name": "udamy-project",
+  "version": "1.0.0",
+  "description": "Test Project",
+  "main": "index.js",
+  "engines": {
+    "node": "12.15.0",
+    "yarn": "1.22.0"
+  },
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "Pratik Kenaudekar",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2"
+  }
+}
