@@ -12,7 +12,7 @@
     "server": "nodemon index.js",
     "client": "yarn --cwd client start",
     "dev": "concurrently \"yarn server\" \"yarn client\"",
-    "heroku-postbuild": "yarn --cwd client"
+    "heroku-postbuild": "YARN_PRODUCTION=false yarn install --cwd client && yarn run build --cwd client"
   },
   "author": "Pratik Kenaudekar",
   "license": "MIT",
