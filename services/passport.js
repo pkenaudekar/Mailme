@@ -22,7 +22,8 @@ passport.use(
         clientSecret: keys.googleClientSecret,
         callbackURL: '/auth/google/callback',
         proxy: true        
-    }, (accessToken, refreshToken, profile, done) => {
+    }, 
+    /*(accessToken, refreshToken, profile, done) => {
         //console.log('access token ',accessToken);
         //console.log('refresh token ',refreshToken);
         //console.log('profile: ',profile);
@@ -41,5 +42,22 @@ passport.use(
                 }
             }
         );        
+    })*/
+    async (accessToken, refreshToken, profile, done) => {
+        //console.log('access token ',accessToken);
+        //console.log('refresh token ',refreshToken);
+        //console.log('profile: ',profile);
+        
+        // Check if the current google user record already exists in database
+        const existingUser = await User.findOne({googleId: profile.id});
+        
+        if(existingUser){
+            // we already have a record with the given profile id
+            return done(null, existingUser);
+        }
+        
+        // else make a new record
+        const user = await new User({googleId: profile.id}).save();
+        done();                 
     })
 );
