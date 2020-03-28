@@ -6,6 +6,7 @@ const keys = require('./config/keys');
 const boayParser = require('body-parser');
 
 require('./models/User');
+require('./models/Survey');
 require('./services/passport');
 
 const app = express();
@@ -29,6 +30,7 @@ mongoose.connect(keys.mongoURI, {
 
 require('./routes/authRoutes')(app);
 require('./routes/billingRoutes')(app);
+require('./routes/surveyRoutes')(app);
 
 if(process.env.NODE_ENV  === 'production'){
     // Express will surve up production asssets 

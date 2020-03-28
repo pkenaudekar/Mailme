@@ -4,7 +4,7 @@ const Landing = () => {
     return(
         <div style={{ textAlign: 'center'}}>
             <h1>
-                Test Project
+                Mail Me!!
             </h1>
             Collect feedback from your users
         </div>

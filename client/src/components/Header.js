@@ -22,20 +22,25 @@ class Header extends Component {
     }
     render(){
         console.log(this.props);
-        return(             
-        <nav>
-            <div className="nav-wrapper">
-                <Link 
-                    to={ this.props.auth ? '/surveys' : '/'} 
-                    className="left brand-logo"
-                >
-                    Test Project
-                </Link>
-                <ul className="right">
-                    {this.renderContent()}
-                </ul>
+        return( 
+            <div class="navbar-fixed">
+                <nav className="#0097a7 cyan darken-2">
+                    <div className="nav-wrapper">
+                        <Link 
+                            to={ this.props.auth ? '/surveys' : '/'} 
+                            className="left brand-logo"                            
+                        >
+                            &nbsp;&nbsp;Mail Me
+                        </Link>
+                        <ul className="right">
+                            {this.renderContent()}
+                        </ul>
+                    </div>
+                </nav>  
             </div>
-        </nav>      
+            
+                
+         
         );
     }
 }

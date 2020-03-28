@@ -8,7 +8,7 @@ class StripeWrapper extends Component {
         
         return(
             <StripeCheckout 
-            name="Test Project"
+            name="Mail Me"
             description="₹5 for 5 email credits"
             amount={500}
             currency="INR"// To show what currency to ask for, without this it shows USD by default
