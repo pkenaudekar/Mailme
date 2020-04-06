@@ -21,7 +21,6 @@ class Header extends Component {
         }
     }
     render(){
-        console.log(this.props);
         return( 
             <div class="navbar-fixed">
                 <nav className="#0097a7 cyan darken-2">
