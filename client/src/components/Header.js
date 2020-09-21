@@ -36,16 +36,13 @@ class Header extends Component {
                         </ul>
                     </div>
                 </nav>  
-            </div>
-            
-                
-         
+            </div>    
         );
     }
 }
 
 function mapStateToProps({ auth }) {
-    return { auth};
+    return { auth };
 }
 
 export default connect(mapStateToProps)(Header);
