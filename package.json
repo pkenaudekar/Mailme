@@ -29,7 +29,7 @@
     "express": "^4.17.1",
     "heroku": "^7.38.2",
     "http-proxy": "1.18.1",
-    "lodash": "4.17.19",
+    "lodash": "4.17.21",
     "mongoose": "^5.9.3",
     "ngrok": "^3.2.7",
     "node-fetch": "2.6.1",
