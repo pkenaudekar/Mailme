@@ -33,7 +33,7 @@
     "mongoose": "^5.9.3",
     "ngrok": "^3.2.7",
     "node-fetch": "2.6.1",
-    "node-forge": "0.10.0",
+    "node-forge": "1.0.0",
     "nodemon": "^2.0.2",
     "passport": "^0.4.1",
     "passport-google-oauth20": "^2.0.0",
